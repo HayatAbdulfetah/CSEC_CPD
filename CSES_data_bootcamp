@@ -1,0 +1,233 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNjEOkarck0wE+1uEBKKclB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/HayatAbdulfetah/CSEC_CPD/blob/main/CSES_data_bootcamp\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fz_rUUjm-8k1"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.What is the difference between a list, a dictionary, and a NumPy array? Give one example of each. answer:list: is a collection of item which can be of different type; lists are mutable datatype means it can be changed. eg: lst = [1,2,3,\"hi\"] dictionary:is a collection of key value pair, each key must be unique to access their corresponding value. eg: dict = {\"name\":\"Ana\",\"age\":20,\"city\":\"Adama\"}\n",
+        "NumPy Array:it is designed for numerical competations and allows for efficient storage and manipulation of large datasets and in NumPy array all elements must be of the same datatype. eg:import numpy as np arr = np.array([1,2,3,4,5])\n",
+        "\n",
+        "Colab"
+      ],
+      "metadata": {
+        "id": "9q0FR_Z8DShj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "lst = [1,2,3,\"hi\"]\n",
+        "print(lst)\n",
+        "dict = {\"name\":\"Ana\",\"age\":20,\"city\":\"Adama\"}\n",
+        "print(dict)\n",
+        "arr = np.array([1,2,3,4,5])\n",
+        "print(arr)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YEnIqaNvD1Bs",
+        "outputId": "4e3f77d4-e7d5-4707-9e52-4a434197e3b8"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 'hi']\n",
+            "{'name': 'Ana', 'age': 20, 'city': 'Adama'}\n",
+            "[1 2 3 4 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.Given the list [10, 15, 20, 25, 30], write a function that returns the square of only even numbers."
+      ],
+      "metadata": {
+        "id": "WWO2rNF6EPAK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lst = [10,15,20,25,30]\n",
+        "def num_square():\n",
+        "  for i in range(len(lst)):\n",
+        "    if lst[i] %2 ==0:\n",
+        "      a = lst[i]*lst[i]\n",
+        "      print(a)\n",
+        "num_square()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0UaXmxOiEWgV",
+        "outputId": "8e56d99a-34d6-463f-9197-0147a739887b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n",
+            "400\n",
+            "900\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.What does the following code output, and why? x = [1,2,3]y = x y.append(4) print(x)answer: when assigning y = x you are not create a new list instead y become a reference to the same list object that is x refers to both x and y point to the same list in a memory. so append(4) modifying the list that is both x and y reference."
+      ],
+      "metadata": {
+        "id": "Eb16Xm9NFHff"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = [1,2,3]\n",
+        "y = x\n",
+        "y.append(4)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZCmHGiVfFRUK",
+        "outputId": "8b9e5dbc-e58d-4e67-99b6-c994d73fbb1e"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.What does .shape and .describe() tell you about a pandas DataFrame? Show using an example? answer:.shape : the .shape attribute returns a tuple representing the dimensions of the DataFrame.it gives you the number of rows and columns in the format(number_of_rows,number_of_columns). .describe() : this method provides a summery of the statistics for numerical columns in tje DataFrame.it include measures such as count, mean,standard deviation, minimum, maximum, and the quartiles(25%,50%,75%)."
+      ],
+      "metadata": {
+        "id": "OF53b3p7FcpR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "# Creating a sample DataFrame\n",
+        "data = {'Age': [25, 30, 35, 40, 45],\n",
+        "'Salary': [50000, 60000, 70000, 80000, 90000],\n",
+        "'Department': ['HR', 'Finance', 'IT', 'Marketing', 'Sales']\n",
+        "}\n",
+        "\n",
+        "df = pd.DataFrame(data)\n",
+        "\n",
+        "# Using .shape\n",
+        "print(\"Shape of the DataFrame:\", df.shape)\n",
+        "\n",
+        "# Using .describe()\n",
+        "print(\"\\nStatistical summary of the DataFrame:\")\n",
+        "print(df.describe())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lONrVvU5GGO4",
+        "outputId": "3edc75b0-11b9-4aca-9cf2-5d510c38a99f"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Shape of the DataFrame: (5, 3)\n",
+            "\n",
+            "Statistical summary of the DataFrame:\n",
+            "             Age        Salary\n",
+            "count   5.000000      5.000000\n",
+            "mean   35.000000  70000.000000\n",
+            "std     7.905694  15811.388301\n",
+            "min    25.000000  50000.000000\n",
+            "25%    30.000000  60000.000000\n",
+            "50%    35.000000  70000.000000\n",
+            "75%    40.000000  80000.000000\n",
+            "max    45.000000  90000.000000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.Load this CSV: airtravel.csv Print the first 5 rowsWhat do you notice about the data?"
+      ],
+      "metadata": {
+        "id": "vsrUVrXIGVA_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "uwzHDatXGgi1"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
