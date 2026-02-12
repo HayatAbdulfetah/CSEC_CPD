@@ -1,7 +1,11 @@
-n=int(input())
-count=0
-for i in range(n):
-	x=input()
-	if x.count('1')>=2:
-		count+=1
-print(count)	
+n = int(input())
+sure = 0
+
+for _ in range(n):
+    soln = input()
+    correct = soln.count("1")
+    
+    if correct >= 2:
+        sure += 1
+        
+print(sure)
