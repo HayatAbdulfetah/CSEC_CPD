@@ -1,12 +1,13 @@
-w=input()
-lower=0
-upper=0
-for i in w:
-	if i.islower():
-		lower+=1
-	else:
-		upper+=1
-if lower>=upper:
-	print(w.lower())
+s = input()
+upper = 0
+lower = 0
+
+for i in s:
+    if i.isupper():
+        upper += 1
+    else:
+        lower += 1
+if lower >= upper:
+    print(s.lower())
 else:
-	print(w.upper())
+    print(s.upper())
