@@ -20,3 +20,5 @@ int main() {
     }
     cout<<isu<<endl;
 }
+
+// problem link --> https://codeforces.com/problemset/problem/427/A
