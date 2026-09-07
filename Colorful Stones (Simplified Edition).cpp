@@ -14,3 +14,5 @@ int main() {
     cout<<k<<endl;
     return 0;
 }
+
+// problem link https://codeforces.com/problemset/problem/265/A
