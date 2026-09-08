@@ -1,8 +1,9 @@
 n = int(input())
 stack = []
+count = 0
 for _ in range(n):
   s = input()
-  count = 0
+  
   if s in stack:
     count += 1
     print(s + str(count))
