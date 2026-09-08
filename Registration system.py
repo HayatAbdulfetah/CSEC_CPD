@@ -10,6 +10,7 @@ for _ in range(n):
   else:
     stack.append(s)
     print("OK")
+    count = 0
 
 # another simpler solution 
 # n = int(input())
