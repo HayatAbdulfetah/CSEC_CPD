@@ -30,3 +30,5 @@ int main() {
     cout<<player1<<" "<<player2<<"\n";
     return 0;
 }
+
+// Codeforces problem link --> problem link --> https://codeforces.com/problemset/problem/381/A
