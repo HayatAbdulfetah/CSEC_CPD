@@ -13,3 +13,5 @@ int main() {
     cout<<a<<"/"<<b;
     return 0;
 }
+
+// codeforces problem link --> https://codeforces.com/problemset/problem/9/A
